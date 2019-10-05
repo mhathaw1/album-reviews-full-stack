@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title th:text="${reviewModel.name}">A review</title>
+	<link rel="stylesheet" type="text/css" media="all" href="./css/ReviewStyle.css" th:href="@{./css/ReviewStyle.css}">
+</head>
+<body>
+
+	<header>
+		<h1 th:text="${reviewModel.name}">A Review</h1>
+	</header>
+
+	<main>
+		<img th:src="${reviewModel.imgUrl}"> 
+		<p th:text="${reviewModel.description}"></p>
+	</main>
+
+	<footer>
+        <p><a href="/show-reviews ">back to reviews</a></p>
+		<small>Copyright Michael Hathaway 2019</small>
+	</footer>
+
+</body>
+</html>
+

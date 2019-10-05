@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Best Albums of the 90s</title>
+	<link rel="stylesheet" type="text/css" media="all" href="/css/ReviewStyle.css" th:href="@{/css/ReviewStyle.css}">
+	
+
+</head>
+<body>
+
+	<header>
+		<h1>Best Albums of the 90s</h1>
+	</header>
+	
+	<main>
+		<ul>
+			<li th:each="review: ${reviewsModel}"><a th:href="@{/show-single-review(id=${review.id})}" th:text="${review.name}"></a></li>
+		</ul>
+	</main>
+
+	<footer>
+		<small>Copyright Michael Hathaway 2019</small>
+	</footer>
+
+</body>
+</html>
